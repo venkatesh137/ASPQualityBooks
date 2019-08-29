@@ -11,10 +11,20 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-                <th>
+    <tr>
+        <th>
+            <a asp-action="Index"asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(Model=>Model.Name)</a>
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(Model=>Model.Name)
+        </th>*@
+        @*<th>
+            <a asp-action="Index"asp-route-sortOrder="@ViewData["DisSortParm"]">@Html.DisplayNameFor(Model=>Model.Description)</a>
+        </th>
+        <th></th>*@
+        @*<th>
                     @Html.DisplayNameFor(model => model.Name)
-                </th>
+                </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
@@ -31,7 +41,7 @@
                     @Html.DisplayNameFor(model => model.SupplierID)
                 </th>
             <th></th>
-        </tr>
+    </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {

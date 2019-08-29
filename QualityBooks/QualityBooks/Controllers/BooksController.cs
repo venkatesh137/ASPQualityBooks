@@ -20,9 +20,32 @@ namespace QualityBooks.Controllers
         }
 
         // GET: Books
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View(await _context.Books.ToListAsync());
+        //}
+        public async Task<IActionResult> Index(string sortOrder)
         {
-            return View(await _context.Books.ToListAsync());
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DisSortParm"] = sortOrder == "Discription" ? "Des_desc" : "Discription";
+            var books = from s in _context.Books
+                           select s;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    books = books.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    books = books.OrderBy(s => s.Description);
+                    break;
+                case "date_desc":
+                    books = books.OrderByDescending(s => s.Description);
+                    break;
+                default:
+                    books = books.OrderBy(s => s.Name);
+                    break;
+            }
+            return View(await books.AsNoTracking().ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -35,6 +58,7 @@ namespace QualityBooks.Controllers
 
             var book = await _context.Books
                 .SingleOrDefaultAsync(m => m.BookID == id);
+            
             if (book == null)
             {
                 return NotFound();
