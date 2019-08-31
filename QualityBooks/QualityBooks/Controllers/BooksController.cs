@@ -24,39 +24,78 @@ namespace QualityBooks.Controllers
         //{
         //    return View(await _context.Books.ToListAsync());
         //}
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
-        {
-            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            //ViewData["DisSortParm"] = sortOrder == "Discription" ? "Des_desc" : "Discription";
+        //public async Task<IActionResult> Index(string sortOrder, string searchString)
+        //{
+        //    ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+        //    //ViewData["DisSortParm"] = sortOrder == "Discription" ? "Des_desc" : "Discription";
 
+        //    ViewData["CurrentFilter"] = searchString;
+        //    var books = from s in _context.Books
+        //        select s;
+        //    if (!String.IsNullOrEmpty(searchString))
+        //    {
+        //        books = books.Where(s => s.Name.Contains(searchString));
+        //    }
+
+
+
+        //            var sBooks = from s in _context.Books
+        //                   select s;
+        //    switch (sortOrder)
+        //    {
+        //        case "name_desc":
+        //            books = books.OrderByDescending(s => s.Name);
+        //            break;
+        //        //case "Date":
+        //        //    books = books.OrderBy(s => s.Description);
+        //        //    break;
+        //        //case "date_desc":
+        //        //    books = books.OrderByDescending(s => s.Description);
+        //        //    break;
+        //        default:
+        //            books = books.OrderBy(s => s.Name);
+        //            break;
+        //    }
+        //    return View(await books.AsNoTracking().ToListAsync());
+        //}
+        // Introduced in Week 3
+        public async Task<IActionResult> Index(
+            string sortOrder,
+            string currentFilter,
+            string searchString,
+            int? pageNumber)
+        {
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+           
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
             ViewData["CurrentFilter"] = searchString;
             var books = from s in _context.Books
-                select s;
+                           select s;
             if (!String.IsNullOrEmpty(searchString))
             {
                 books = books.Where(s => s.Name.Contains(searchString));
             }
-
-
-
-                    var sBooks = from s in _context.Books
-                           select s;
             switch (sortOrder)
             {
                 case "name_desc":
                     books = books.OrderByDescending(s => s.Name);
                     break;
-                //case "Date":
-                //    books = books.OrderBy(s => s.Description);
-                //    break;
-                //case "date_desc":
-                //    books = books.OrderByDescending(s => s.Description);
-                //    break;
+                
                 default:
                     books = books.OrderBy(s => s.Name);
                     break;
             }
-            return View(await books.AsNoTracking().ToListAsync());
+            int pageSize = 3;
+            return View(await PaginatedList<Book>.CreateAsync(books.AsNoTracking(), pageNumber ?? 1,
+            pageSize));
         }
 
         // GET: Books/Details/5

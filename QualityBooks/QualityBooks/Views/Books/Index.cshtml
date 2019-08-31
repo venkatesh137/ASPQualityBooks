@@ -1,5 +1,5 @@
-﻿@model IEnumerable<QualityBooks.Models.Book>
-
+﻿@*@model IEnumerable<QualityBooks.Models.Book>*@
+@model PaginatedList<QualityBooks.Models.Book>
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,11 +11,11 @@
 </p>
 
 @*adding a search box*@
-<form asp-action="Index"method="get">
+<form asp-action="Index" method="get">
     <div class="form-actions no-color">
         <p>
-            Find by Name <input type="text" name="SearchString" value="@ViewData["currentFilter"]"/>
-            <input type="submit" value="Search" class="btn btn-default"/>|
+            Find by Name <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-default" />|
             <a asp-action="Index">Back to Full List</a>
         </p>
     </div>
@@ -24,65 +24,70 @@
 
 <table class="table">
     <thead>
-    <tr>
-        <th>
-            <a asp-action="Index"asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(Model=>Model.Name)</a>
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(Model=>Model.Name)
+        <tr>
+            @*<th>
+            <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(Model => Model.Name)</a>
         </th>*@
-        @*<th>
-            <a asp-action="Index"asp-route-sortOrder="@ViewData["DisSortParm"]">@Html.DisplayNameFor(Model=>Model.Description)</a>
-        </th>
-        <th></th>*@
-        @*<th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>*@
-                <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Price)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PathOfFile)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CategoryID)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.SupplierID)
-                </th>
-            <th></th>
-    </tr>
+            @*Introduced in Week 3*@
+            <th>
+                @*<a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(model => model.LastName)</a>*@
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a>
+            </th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Category ID</th>
+            <th>Supplier ID</th>
+
+
+        </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PathOfFile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupplierID)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.BookID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BookID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BookID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PathOfFile)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SupplierID)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BookID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BookID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
