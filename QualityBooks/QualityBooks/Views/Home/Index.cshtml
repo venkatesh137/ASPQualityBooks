@@ -1,142 +1,110 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
+<environment names="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</environment>
 
-    @*to resize all the images in the carousel*@
-    <style>
-        .carousel-inner > .item > img {
-            width: 100%;
-            height: 350px;
-        }
-    </style>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/BSlider1.jpg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/BSlider2.jpg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-
-                <p>
-                    <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
-                </p>
-
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/BSlider3.jpg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/BSlider4.jpg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-
-<br />
 <div class="container">
-    <!--Featured Item-->
-    <div class="spec">
-        <h3>Featured Items</h3>
-        <div class="ser-t">
-            <b></b>
-            <span><i></i></span>
-            <b class="line"></b>
-        </div>
-    </div> <!-- //Featured Item-->
 
-    <div class="row">
-        <div class="col-md-3 put_center">
-            <img class="maxwidth" src="~/images/IBook1.jpg" alt="Arts & Music" height="300" width="220"/>
-            <br />
-            <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="1">More Arts & Music Books</a>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        @*to resize all the images in the carousel*@
+        <style>
+            .carousel-inner > .item > img {
+                width: 100%;
+                height: 350px;
+            }
+        </style>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="~/images/BSlider1.jpg" alt="ASP.NET" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/BSlider2.jpg" alt="ASP.NET" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+
+                    <p>
+                        <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/BSlider3.jpg" alt="ASP.NET" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/BSlider4.jpg" alt="ASP.NET" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        <a class="btn btn-default" asp-controller="OrderBooks" asp-action="Index">SHOP NOW</a>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3 put_center">
-            <img class="maxwidth" src="~/images/IBook2.jpg" alt="Business" height="300" width="220"/>
-            <br />
-            <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="2">More Business Books</a>
-        </div>
-        <div class="col-md-3 put_center">
-            <img class="maxwidth" src="~/images/IBook3.jpg" alt="Sports" height="300" width="220"/>
-            <br />
-            <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="3">More Sports Books</a>
-        </div>
-        <div class="col-md-3 put_center">
-            <img class="maxwidth" src="~/images/IBook4.jpg" alt="Maori Culture" height="300" width="220"/>
-            <br />
-            <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="4">More Maori Culture Books</a>
-        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-
 </div>
+    <br />
+    <div class="container">
+        <!--Featured Item-->
+        <div class="spec">
+            <h2>Featured Books</h2>
+            <div class="ser-t">
+                <b></b>
+                <span><i></i></span>
+                <b class="label-default"></b>
+            </div>
+        </div> 
+        
+        <!-- //Featured Item-->
 
+        <div class="row">
+            <div class="col-md-3 put_center">
+                <img class="maxwidth" src="~/images/IBook1.jpg" alt="Arts & Music" />
 
-@*<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+                <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="2">More Arts & Music Books</a>
+            </div>
+            <div class="col-md-3 put_center">
+                <img class="maxwidth" src="~/images/IBook2.jpg" alt="Business" />
+
+                <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="2">More Business Books</a>
+            </div>
+            <div class="col-md-3 put_center">
+                <img class="maxwidth" src="~/images/IBook3.jpg" alt="Sports"/>
+
+                <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="3">More Sports Books</a>
+            </div>
+            <div class="col-md-3 put_center">
+                <img class="maxwidth" src="~/images/IBook4.jpg" alt="Maori Culture" />
+
+                <a class="btn btn-default" asp-action="Index" asp-controller="OrderBooks" asp-route-id="4">More Maori Culture Books</a>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>*@

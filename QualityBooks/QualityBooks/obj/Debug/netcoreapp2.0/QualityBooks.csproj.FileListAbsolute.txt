@@ -3,10 +3,10 @@ C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\bin\Debug\ne
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.runtimeconfig.dev.json
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.dll
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.pdb
-C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.csprojAssemblyReference.cache
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.csproj.CoreCompileInputs.cache
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.AssemblyInfoInputs.cache
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.AssemblyInfo.cs
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.dll
 C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.pdb
+C:\Users\harjinder\source\MyProjectASPNet\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.csprojAssemblyReference.cache

@@ -1,0 +1,299 @@
+﻿.maxwidth{
+    width:100%;
+}
+
+.btn-primary.raised {
+	box-shadow: 0 3px 0 0 #007299;
+}
+.btn-primary.raised:active, .btn-primary.raised.active {
+	background: #33a6cc;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+
+/* Footer Start */
+.footer{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+.footer .footer-left{
+	width: 40%;
+}
+.footer .footer-copyright{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer links */
+.footer .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+
+/* Footer Center */
+
+.footer .footer-center{
+	width: 35%;
+}
+
+.footer .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer .footer-right{
+	width: 20%;
+}
+
+.footer .footer-designer{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer .footer-designer span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer .footer-icons{
+	margin-top: 25px;
+}
+
+.footer .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.footer-icons a:hover{
+	opacity:0.7;
+}
+
+/* Footer End */
+
+
+
+/*style for index page featured items start*/
+.spec {
+    text-align: center;
+    margin-bottom: 3em;
+}
+.spec h3{
+    font-size:3em;
+	color:#000;
+	margin-bottom:0.5em;
+}
+.ser-t {
+    text-align: center;
+    margin: 0 auto;
+    width: 20%;
+    position: relative;
+}
+.ser-t b{
+	width: 100%;
+    height: 2px;
+    display: block;
+    background: #5383d3;
+    margin-bottom: 3px;
+}
+.ser-t b.line{
+	width: 80%;
+	margin:0 auto;
+}
+.ser-t  span{
+	width: 40px;
+    height: 40px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    left: 42%;  
+}
+.ser-t  span i{
+	width: 20px;
+	height: 20px;
+    display: block;
+    border: 2px solid #5383d3;
+    -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+    -moz-transform: rotate(45deg) translate3d(0, 0, 0);
+    -ms-transform: rotate(45deg) translate3d(0, 0, 0);
+    -o-transform: rotate(45deg) translate3d(0, 0, 0);
+    transform: rotate(45deg) translate3d(0, 0, 0);
+    margin-left: 0.7em;
+}
+
+/*style for index page featured items end*/
+
+
+
+/*style for product page start*/
+.col-m {
+
+    padding: 1em;
+	width: 25%;
+    float: left;
+	min-height: 1px;
+    height: 430px;
+}
+
+.mid-1 {
+    padding: 2em 0 0;
+}
+
+.mid-1 h5 {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    font-family: 'Offside', cursive;
+}
+.mid-1 h5 a {
+    color:#0280e1;
+    text-decoration:none;
+}
+
+.mid-1 h5 a:hover {
+    color: #FAB005;
+}
+
+.mid-1 h6 {
+    font-size: 1.0em;
+}
+
+.mid-1 h4{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:1.2em;
+    font-weight:bold;
+    line-height: 1.8em;
+}
+
+/*style for product page end*/
+
+
+
+
+/*contact satrt*/
+.contact{
+    position:relative;
+    width:100%;  
+    text-align:center;
+}
+
+.contact h2{
+   position: absolute; 
+   top: 50px; 
+   left: 0; 
+   width: 100%; 
+   font: 18px/25px Helvetica, Sans-Serif; 
+}
+
+/*contact end*/
+
+
+/*about satrt*/
+.about{
+    padding: 7.5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: #666;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+}
+.about p {
+    font-size: 1.2em;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+
+.about h2{
+    font-size: 2em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 20px 0;
+    font-family: 'ClarendonBT-Light', serif;
+    padding-bottom: 15px;
+}
+
+.about h3{
+    text-align:center;
+    padding-bottom: 2%;
+}
+
+/*about end*/

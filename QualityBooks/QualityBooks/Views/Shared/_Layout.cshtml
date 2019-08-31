@@ -9,6 +9,9 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/myStyle.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <meta name="theme-color" content="#ffffff">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -28,7 +31,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img style="max-height:28px" src="~/images/QBLogo.png" alt="Quality Books" /></a>
-               @*<a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Quality Books</a>*@
+                @*<a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Quality Books</a>*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -40,14 +43,74 @@
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
+        
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - Quality Books</p>
-        </footer>
-    </div>
+        </div>
+         
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-left">
+                    <img src="~/images/QBLogoO.png" width="180" alt="Quality Books" />
+                    <p class="footer-links">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        ·
+                        <a asp-area="" asp-controller="OrderBooks" asp-action="Index">Product</a>
+                        ·
+                        <a asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        ·
+                        <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                    </p>
+                    <p class="footer-copyright">&copy; 2019 - Quality Books</p>
+                </div>
+
+                <div class="footer-center">
+
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>Building 183, 139 Carrington Road </span>Mt Albert, Auckland, New Zealand</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+64 21 037 2109</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:mannharjinder87@gmail.com">support@qualitybooks.co.nz</a></p>
+                    </div>
+
+                </div>
+
+                <div class="footer-right">
+
+                    <p class="footer-designer">
+                        <span>Designer</span>
+                        Harjinder Mann <br /> SID: 0210372109
+                    </p>
+                    <br>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-tumblr"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>  <!-- footer end-->
+
+
+
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
