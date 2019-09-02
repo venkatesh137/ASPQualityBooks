@@ -29,9 +29,9 @@ namespace QualityBooks.Models
         public int CategoryID { get; set; }
         public int SupplierID { get; set; }
 
-        //public Supplier Supplier { get; set; }
-        //public Category Category { get; set; }
-        //public ICollection<OrderItem> OrderLines { get; set; }
-        //public ICollection<CartItem> CartItems { get; set; }
+        public Supplier Supplier { get; set; }
+        public Category Category { get; set; }
+    //    public ICollection<OrderItem> OrderLines { get; set; }
+    //    public ICollection<CartItem> CartItems { get; set; }
     }
 }

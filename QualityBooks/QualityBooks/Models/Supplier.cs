@@ -32,6 +32,6 @@ namespace QualityBooks.Models
         [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
 
-        //public ICollection<Book> books { get; set; }
+        public ICollection<Book> books { get; set; }
     }
 }
