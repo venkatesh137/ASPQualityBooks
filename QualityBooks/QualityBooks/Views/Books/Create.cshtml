@@ -27,9 +27,19 @@
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+            @*<div class="form-group">
+                <label asp-for="PathOfFile" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input type="file" name="uploadFile" id="uploadFile" />
+                    <img id="img-preview" style="max-width: 300px;" class="img img-responsive" src="">
+                </div>
+            </div>*@
+            
             <div class="form-group">
                 <label asp-for="PathOfFile" class="control-label"></label>
-                <input asp-for="PathOfFile" class="form-control" />
+                @*<input asp-for="PathOfFile" class="form-control" />*@
+                <input type="file" name="uploadFile" id="uploadFile" />
+                <img id="img-preview" style="max-width: 300px;" class="img img-responsive" src="">
                 <span asp-validation-for="PathOfFile" class="text-danger"></span>
             </div>
             <div class="form-group">

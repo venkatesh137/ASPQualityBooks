@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Books</h2>
+<h2>Books Management</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -21,48 +21,48 @@
     </div>
 </form>
 
+@*code from notepad shoud be pasted here if not working*@
 
 <table class="table">
     <thead>
         <tr>
-            @*<th>
-            <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(Model => Model.Name)</a>
-        </th>*@
-            @*Introduced in Week 3*@
-            <th>
-                @*<a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(model => model.LastName)</a>*@
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a>
-            </th>
-            <th>Description</th>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Category</th>
             <th>Price</th>
+            <th>Description</th>
+            <th>Supplier</th>
             <th>Image</th>
-            <th>Category ID</th>
-            <th>Supplier ID</th>
-
-
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
+            var imgUrl = @Href("~" + item.PathOfFile);
+            var errImg = @Href("~/Images/Book1.jpg");
+
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookID)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Description)
+                    @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PathOfFile)
+                    @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CategoryID)
+                    @Html.DisplayFor(modelItem => item.Supplier.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.SupplierID)
+                    <img style="width: 100px; height: auto;" src="@imgUrl" alt="Book Image" onerror="this.onerror = null; this.src = '@errImg'">
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.BookID">Edit</a> |
@@ -73,6 +73,10 @@
         }
     </tbody>
 </table>
+
+
+@*this is the end line of the code that was here*@
+
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
