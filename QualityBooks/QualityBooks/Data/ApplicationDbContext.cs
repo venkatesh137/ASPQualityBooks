@@ -17,6 +17,7 @@ namespace QualityBooks.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -28,6 +29,10 @@ namespace QualityBooks.Data
             builder.Entity<Book>().ToTable("Book");
             builder.Entity<Category>().ToTable("Category");
             builder.Entity<Supplier>().ToTable("Supplier");
+            builder.Entity<CartItem>().ToTable("CartItem");
+
         }
+
+        public DbSet<QualityBooks.Models.ShoppingCart> ShoppingCart { get; set; }
     }
 }

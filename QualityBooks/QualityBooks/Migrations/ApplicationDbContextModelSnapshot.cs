@@ -209,6 +209,24 @@ namespace QualityBooks.Migrations
                     b.ToTable("Book");
                 });
 
+            modelBuilder.Entity("QualityBooks.Models.CartItem", b =>
+                {
+                    b.Property<int>("CartItemID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("BookID");
+
+                    b.Property<string>("CartID");
+
+                    b.Property<int>("ItemCount");
+
+                    b.HasKey("CartItemID");
+
+                    b.HasIndex("BookID");
+
+                    b.ToTable("CartItem");
+                });
+
             modelBuilder.Entity("QualityBooks.Models.Category", b =>
                 {
                     b.Property<int>("CategoryID")
@@ -221,6 +239,16 @@ namespace QualityBooks.Migrations
                     b.HasKey("CategoryID");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("QualityBooks.Models.ShoppingCart", b =>
+                {
+                    b.Property<string>("ShoppingCartID")
+                        .ValueGeneratedOnAdd();
+
+                    b.HasKey("ShoppingCartID");
+
+                    b.ToTable("ShoppingCart");
                 });
 
             modelBuilder.Entity("QualityBooks.Models.Supplier", b =>
@@ -303,6 +331,13 @@ namespace QualityBooks.Migrations
                         .WithMany("books")
                         .HasForeignKey("SupplierID")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("QualityBooks.Models.CartItem", b =>
+                {
+                    b.HasOne("QualityBooks.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookID");
                 });
 #pragma warning restore 612, 618
         }
