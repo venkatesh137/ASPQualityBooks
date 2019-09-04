@@ -14,10 +14,14 @@ namespace QualityBooks.Data
             : base(options)
         {
         }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        //public DbSet<ShoppingCart> ShoppingCart { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        //public DbSet<OrderItem> OrderItems { get; set; }
+        //public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -30,9 +34,14 @@ namespace QualityBooks.Data
             builder.Entity<Category>().ToTable("Category");
             builder.Entity<Supplier>().ToTable("Supplier");
             builder.Entity<CartItem>().ToTable("CartItem");
-
+            builder.Entity<OrderItem>().ToTable("OrderItem");
+            builder.Entity<Order>().ToTable("Order");
         }
 
         public DbSet<QualityBooks.Models.ShoppingCart> ShoppingCart { get; set; }
+
+        public DbSet<QualityBooks.Models.Order> Order { get; set; }
+
+        public DbSet<QualityBooks.Models.OrderItem> OrderItem { get; set; }
     }
 }

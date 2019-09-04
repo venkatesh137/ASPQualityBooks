@@ -22,15 +22,7 @@ C:\Users\harjinder\MyProject\MyAssignment1-master\MyAssignment1-master\QualityBo
 C:\Users\harjinder\MyProject\MyAssignment1-master\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.AssemblyInfo.cs
 C:\Users\harjinder\MyProject\MyAssignment1-master\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.dll
 C:\Users\harjinder\MyProject\MyAssignment1-master\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.pdb
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.deps.json
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.runtimeconfig.json
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.runtimeconfig.dev.json
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.dll
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\bin\Debug\netcoreapp2.0\QualityBooks.pdb
 C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.csproj.CoreCompileInputs.cache
 C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.AssemblyInfoInputs.cache
 C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.AssemblyInfo.cs
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.dll
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.pdb
-C:\Users\harjinder\source\repos\MyAssignment1-master\QualityBooks\QualityBooks\obj\Debug\netcoreapp2.0\QualityBooks.csprojAssemblyReference.cache
