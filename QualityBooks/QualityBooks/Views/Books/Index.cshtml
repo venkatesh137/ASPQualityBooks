@@ -16,7 +16,7 @@
         <p>
             Find by Name <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
             <input type="submit" value="Search" class="btn btn-default" />|
-            <a asp-action="Index">Back to Full List</a>
+            <a class="btn btn-default" asp-action="Index">Back to Full List</a>
         </p>
     </div>
 </form>
@@ -40,9 +40,10 @@
         @foreach (var item in Model)
         {
             var imgUrl = @Href("~" + item.PathOfFile);
-            var errImg = @Href("~/Images/Book1.jpg");
+            var errImg = @Href("~/images/Book1.jpg");
 
             <tr>
+                
                 <td>
                     @Html.DisplayFor(modelItem => item.BookID)
                 </td>

@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Details";
+    var imgUrl = @Href("~" + Model.PathOfFile);
+    var errImg = @Href("~/images/book1.jpg");
 }
 
 <h2>Details</h2>
@@ -37,12 +39,12 @@
         <dt>
             @Html.DisplayNameFor(model => model.PathOfFile)
         </dt>
-        @*<dd>
+        <dd>
             <img class="img-responsive" style="max-width: 300px;" src="@imgUrl" alt="Book Image" onerror="this.onerror = null; this.src = '@errImg'">
-        </dd>*@
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.BookID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-default" asp-action="Edit" asp-route-id="@Model.BookID">Edit</a> |
+    <a class="btn btn-default" asp-action="Index">Back to List</a>
 </div>
