@@ -12,9 +12,9 @@ namespace QualityBooks.Controllers
 {
     public class SuppliersController : Controller
     {
-        private readonly ShoppingContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public SuppliersController(ShoppingContext context)
+        public SuppliersController(ApplicationDbContext context)
         {
             _context = context;
         }

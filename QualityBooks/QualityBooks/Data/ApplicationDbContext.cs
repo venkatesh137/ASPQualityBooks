@@ -14,6 +14,9 @@ namespace QualityBooks.Data
             : base(options)
         {
         }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -21,6 +24,10 @@ namespace QualityBooks.Data
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
+
+            builder.Entity<Book>().ToTable("Book");
+            builder.Entity<Category>().ToTable("Category");
+            builder.Entity<Supplier>().ToTable("Supplier");
         }
     }
 }

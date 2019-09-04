@@ -30,7 +30,7 @@ namespace QualityBooks
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //added for quality bags
-            services.AddDbContext<ShoppingContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()

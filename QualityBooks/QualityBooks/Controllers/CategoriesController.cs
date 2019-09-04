@@ -12,9 +12,9 @@ namespace QualityBooks.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly ShoppingContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public CategoriesController(ShoppingContext context)
+        public CategoriesController(ApplicationDbContext context)
         {
             _context = context;
         }

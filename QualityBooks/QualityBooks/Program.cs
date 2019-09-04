@@ -28,7 +28,7 @@ namespace QualityBooks
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<ShoppingContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
