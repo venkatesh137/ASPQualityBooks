@@ -1,2 +1,2 @@
 # MyAssignment1
- same project as contoso university but for books
+QualityBooks Assignment ASP.Net 2.0 in Progress
